@@ -20,6 +20,7 @@ public class D01_registerStepDef {
      register.registerPage().click();
     }
 
+
     @When("user select gender type")
     public void userSelectGenderType() {
         register.femaleGender().click();
@@ -51,7 +52,7 @@ public class D01_registerStepDef {
     }
 
     @And("user fills Password field {string}")
-    public void userFillsPasswordFields(String Password) {
+    public void userFillsPasswordField(String Password) {
         register.password().sendKeys(Password);
     }
 
@@ -71,8 +72,5 @@ public class D01_registerStepDef {
         System.out.println("color is" + register.resultMessage().getCssValue("color"));
         softAssert.assertTrue(register.resultMessage().getCssValue("color").contains("(76, 177, 124, 1)"));
         softAssert.assertAll();
-
     }
-
-
 }

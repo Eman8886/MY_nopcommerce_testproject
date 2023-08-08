@@ -17,6 +17,8 @@ public class P03_homePage {
     By SKU = By.className("sku");
     // hover on feature
     By MainMenuItems = By.xpath("//ul[@class=\"top-menu notmobile\"]/li");
+    By SubMenuItem = By.cssSelector("a[href=\"/desktops\"]");
+    By PageTitle = By.className("page-title");
     // home slider feature
     By HomeSlider = By.className("nivo-imageLink");
     //follow us feature
@@ -54,8 +56,8 @@ public class P03_homePage {
     public WebElement wishlistTab(){return Hooks.driver.findElement(WishlistTab);}
     public WebElement wishlistQytValue(){return Hooks.driver.findElement(WishlistQytValue);}
     public WebElement wishlistQytValueHeader(){return Hooks.driver.findElement(WishlistQytValueHeader);}
-
-
+    public List<WebElement> subMenuItem(){return Hooks.driver.findElements(SubMenuItem);}
+    public WebElement pageTitle(){return Hooks.driver.findElement(PageTitle);}
 
 
 
